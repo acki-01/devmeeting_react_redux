@@ -1,0 +1,497 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Redux-Saga in React · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tasks.html" />
+    
+    
+    <link rel="prev" href="saga-concept.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Devmeeting React + Typescript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../react/">
+            
+                <a href="../react/">
+            
+                    
+                    Hello React
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../react/quick-look-around.html">
+            
+                <a href="../react/quick-look-around.html">
+            
+                    
+                    Quick look around
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../react/jsx.html">
+            
+                <a href="../react/jsx.html">
+            
+                    
+                    JSX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../react/hooks.html">
+            
+                <a href="../react/hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../react/first-component.html">
+            
+                <a href="../react/first-component.html">
+            
+                    
+                    First component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../react/tasks.html">
+            
+                <a href="../react/tasks.html">
+            
+                    
+                    Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../redux/">
+            
+                <a href="../redux/">
+            
+                    
+                    Redux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../redux/redux-flow.html">
+            
+                <a href="../redux/redux-flow.html">
+            
+                    
+                    Redux Flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../redux/redux-boilerplate.html">
+            
+                <a href="../redux/redux-boilerplate.html">
+            
+                    
+                    Redux Boilerplate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../redux/connect-component.html">
+            
+                <a href="../redux/connect-component.html">
+            
+                    
+                    Connect to component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../redux/tasks.html">
+            
+                <a href="../redux/tasks.html">
+            
+                    
+                    Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Redux-Saga
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="saga-concept.html">
+            
+                <a href="saga-concept.html">
+            
+                    
+                    What is Saga
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="saga-usage.html">
+            
+                <a href="saga-usage.html">
+            
+                    
+                    Redux-Saga in React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="tasks.html">
+            
+                <a href="tasks.html">
+            
+                    
+                    Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Redux-Saga in React</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="redux-saga-usage">Redux-Saga usage</h1>
+<p>To be able to use Redux-Saga in project run:
+<code>npm install --save redux-saga axios</code></p>
+<p>Then lets create our first saga. Create folder <code>sagas</code> and in it <code>index.js</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { takeEvery } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-saga/effects&apos;</span>;
+<span class="hljs-keyword">import</span> { addItem } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./actions&apos;</span>;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fetchItem</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> { name: <span class="hljs-string">&apos;Apple&apos;</span>, amount: <span class="hljs-number">1</span> };
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">getItem</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">const</span> item = <span class="hljs-keyword">yield</span> call(fetchItem);
+    <span class="hljs-keyword">yield</span> put(addItem(item));
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">watchSagas</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">yield</span> takeLatest(<span class="hljs-string">&apos;GET&apos;</span>, getItem);
+}
+</code></pre>
+<p>There are couple important methods provided bu Redux-Saga:
+<code>takeLatest</code>: takes last action of its type and cancel others</p>
+<p><code>put</code>: use it to call an action (<strong>without parentesis</strong>)</p>
+<p><code>call</code>: use it to call a function (<strong>with parentesis</strong>)</p>
+<p>To make sagas work modify <code>./src/index.js</code>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { createStore, applyMiddleware, compose } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
+<span class="hljs-keyword">import</span> { Provider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-redux&apos;</span>;
+<span class="hljs-keyword">import</span> reducer <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./reducer&apos;</span>;
+<span class="hljs-keyword">const</span> composeEnhancers = <span class="hljs-built_in">window</span>.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+<span class="hljs-keyword">import</span> createSagaMiddleware <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-saga&apos;</span>;
+
+<span class="hljs-keyword">const</span> store = createStore(
+    reducer,
+    composeEnhancers(applyMiddleware(sagaMiddleware))
+);
+
+sagaMiddleware.run(watchSagas);
+
+ReactDOM.render(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Provider</span> <span class="hljs-attr">store</span>=<span class="hljs-string">{store}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">App</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Provider</span>&gt;</span>,
+    document.getElementById(&apos;root&apos;)
+);
+
+export default App;
+</span></code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="saga-concept.html" class="navigation navigation-prev " aria-label="Previous page: What is Saga">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tasks.html" class="navigation navigation-next " aria-label="Next page: Tasks">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Redux-Saga in React","level":"1.4.2","depth":2,"next":{"title":"Tasks","level":"1.4.3","depth":2,"path":"saga/tasks.md","ref":"saga/tasks.md","articles":[]},"previous":{"title":"What is Saga","level":"1.4.1","depth":2,"path":"saga/saga-concept.md","ref":"saga/saga-concept.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","advanced-emoji"],"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/arkadiuszizycki/devmeeting_react_redux/master"},"advanced-emoji":{"embedEmojis":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"saga/saga-usage.md","mtime":"2019-11-16T21:58:02.304Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T19:14:47.900Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
