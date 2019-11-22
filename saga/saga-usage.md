@@ -6,7 +6,7 @@ To be able to use Redux-Saga in project run:
 Then lets create our first saga. Create folder `sagas` and in it `index.js`
 
 ```js
-import { takeEvery } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
 import { addItem } from './actions';
 function fetchItem() {
     return { name: 'Apple', amount: 1 };
