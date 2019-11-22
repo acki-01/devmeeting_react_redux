@@ -19,7 +19,7 @@ const App = () => {
 };
 ```
 
-But You need remember that `setState` is asynchronous.
+But you need to remember that `setState` is asynchronous.
 
 ## useEffect
 

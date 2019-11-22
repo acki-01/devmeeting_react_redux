@@ -366,7 +366,9 @@
                                 
                                 <h1 id="redux-boilerplate">Redux Boilerplate</h1>
 <h2 id="reducer">Reducer</h2>
-<p>Reducer is a function which has access to store and action which was made. Depending on action type decide how to handle state and returns it new version. If provided action wasn&apos;t specify in reducer function it returns unchanged state. To create basic reducer create folder <code>store</code> in <code>./src</code> directory file <code>storeName.js</code> and in it</p>
+<p>Reducer is a function which has access to store and action which was made. Depending on action type it decides how to
+ handle state and returns it as a new version of it. If provided action wasn&apos;t specified in reducer function it returns
+  unchanged state. To create basic reducer create folder <code>store</code> in <code>./src</code> directory and a file <code>storeName.js</code> in it.</p>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> initialState = {
     items: [],
     text: <span class="hljs-string">&apos;&apos;</span>
@@ -413,7 +415,7 @@ ReactDOM.render(
 });
 </code></pre>
 <h2 id="redux-devtools">Redux devtools</h2>
-<p>Immutability of Redux gives us access to a powerfull tool in which we can inspect our store, changes and move in a timeline of actions that were dispatched.</p>
+<p>Immutability of Redux gives us access to a powerful tool in which we can inspect our store, changes and move in a timeline of actions that were dispatched.</p>
 <p>Install Redux devtools plugin for Chrome and in application in <code>./src/index.js</code>:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
 <span class="hljs-keyword">import</span> { createStore, applyMiddleware, compose } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux&apos;</span>;
@@ -484,7 +486,7 @@ export default App;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Redux Boilerplate","level":"1.3.2","depth":2,"next":{"title":"Connect to component","level":"1.3.3","depth":2,"path":"redux/connect-component.md","ref":"redux/connect-component.md","articles":[]},"previous":{"title":"Redux Flow","level":"1.3.1","depth":2,"path":"redux/redux-flow.md","ref":"redux/redux-flow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","advanced-emoji"],"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/arkadiuszizycki/devmeeting_react_redux/master"},"advanced-emoji":{"embedEmojis":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/redux-boilerplate.md","mtime":"2019-11-21T18:48:27.425Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T19:25:40.859Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Redux Boilerplate","level":"1.3.2","depth":2,"next":{"title":"Connect to component","level":"1.3.3","depth":2,"path":"redux/connect-component.md","ref":"redux/connect-component.md","articles":[]},"previous":{"title":"Redux Flow","level":"1.3.1","depth":2,"path":"redux/redux-flow.md","ref":"redux/redux-flow.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","advanced-emoji","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/arkadiuszizycki/devmeeting_react_redux/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"redux/redux-boilerplate.md","mtime":"2019-11-22T17:18:09.156Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T17:47:40.685Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -495,6 +497,10 @@ export default App;
     
         
         <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

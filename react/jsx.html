@@ -365,30 +365,34 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="jsx">JSX</h1>
-<p>JSX is the small language that handles rendering of React elements. Internally all the tags are replaced with calls to <code>React.createElement</code>, so this:</p>
+<p>JSX is an extension of the JavaScript language based on ES6 that handles rendering of React components that allow
+ you to use <code>html</code> within <code>js</code> files. Internally all the html tags are replaced with calls to <code>React.createElement</code>, so
+  this:</p>
 <pre><code class="lang-jsx"><span class="hljs-keyword">const</span> workshopTitle = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Devmeeting React + Redux<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>;
 </code></pre>
 <p>becomes this:</p>
 <pre><code class="lang-jsx"><span class="hljs-keyword">const</span> workshopTitle = React.createElement(<span class="hljs-string">&apos;p&apos;</span>, {}, <span class="hljs-string">&apos;Devmeeting React + Redux&apos;</span>);
 </code></pre>
-<p>This comes with couple of problems or gotchas, first of which is why you need to import React in every component file, even when you don&apos;t reference it directly.</p>
+<p>This comes with couple of problems or gotchas, first of which is why you need to import React in every component file
+ that uses jsx syntax, even when you don&apos;t reference it directly.</p>
 <h2 id="almost-like-html">Almost like HTML</h2>
-<p>Because the JSX code we write compiles into JavaScript, there are some reserved keywords that you can&apos;t just use in your code.
-Unfortunately, some of those keywords are quite useful in HTML code, like <code>class</code>. In JSX we use <code>className</code> instead.</p>
-<p>Here&apos;s a list of keywords we might run into, and their replacements:</p>
+<p>Because the JSX code we write compiles into JavaScript, there are some reserved keywords that you can&apos;t use in your code.
+Unfortunately, some of those keywords are quite useful in HTML code, like <code>class</code>. So in JSX we use <code>className</code> instead.</p>
+<p>Here&apos;s a list of keywords we might run into and their replacements:</p>
 <ul>
 <li><code>class</code> becomes <code>className</code>,</li>
 <li><code>for</code> (used on labels to indicate which input they describe) should be replaced with <code>htmlFor</code>,</li>
 <li><code>tabindex</code> becomes <code>tabIndex</code> (capital &apos;I&apos;),</li>
 <li><code>checked</code> works differently, for normal behavior use <code>defaultChecked</code>,</li>
-<li><code>onclick</code>, <code>onchange</code>, ... -&gt; <code>onClick</code>, <code>onChange</code></li>
+<li><code>onclick</code>, <code>onchange</code>, ... -&gt; <code>onClick</code>, <code>onChange</code> all camel cased.</li>
 </ul>
 <p>Other differences:</p>
 <ul>
-<li>all attributes are case sensitive and have to be <code>camelCased</code>, no hyphens,</li>
-<li>all elements can be self closing, if they have no children (so <code>&lt;div /&gt;</code> is legal),</li>
-<li><code>style</code> attribute takes and object of css-like properties (<code>{ backgroundColor: blue }</code>)</li>
-<li>React elements have to always be wrapped in one single <code>HTML element</code>, if you don&apos;t want to use redundant element there is <code>React.Fragment</code> abbrieviation <code>&lt;&gt;</code></li>
+<li>All attributes are case sensitive and have to be <code>camelCased</code>, no hyphens,</li>
+<li>All elements can be self closing if they have no children (so <code>&lt;div /&gt;</code> is legal),</li>
+<li><code>style</code> attribute takes and object of css-like properties (<code>{ backgroundColor: blue }</code>) <a href="https://reactjs.org/docs/dom-elements.html#style" target="_blank">read more</a></li>
+<li>React elements have to always be wrapped in one single <code>HTML element</code>. If you don&apos;t want to use redundant element
+there is <code>React.Fragment</code> abbreviation <code>&lt;&gt;</code></li>
 </ul>
 <h2 id="interpolation">Interpolation</h2>
 <p>Everything that goes between <code>{</code> and <code>}</code> will be evaluated as an JavaScript expression:</p>
@@ -458,7 +462,7 @@ Unfortunately, some of those keywords are quite useful in HTML code, like <code>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JSX","level":"1.2.2","depth":2,"next":{"title":"Hooks","level":"1.2.3","depth":2,"path":"react/hooks.md","ref":"react/hooks.md","articles":[]},"previous":{"title":"Quick look around","level":"1.2.1","depth":2,"path":"react/quick-look-around.md","ref":"react/quick-look-around.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","advanced-emoji"],"pluginsConfig":{"edit-link":{"label":"Edit This Page","base":"https://github.com/arkadiuszizycki/devmeeting_react_redux/master"},"advanced-emoji":{"embedEmojis":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/jsx.md","mtime":"2019-11-16T18:07:29.063Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-21T19:25:40.859Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JSX","level":"1.2.2","depth":2,"next":{"title":"Hooks","level":"1.2.3","depth":2,"path":"react/hooks.md","ref":"react/hooks.md","articles":[]},"previous":{"title":"Quick look around","level":"1.2.1","depth":2,"path":"react/quick-look-around.md","ref":"react/quick-look-around.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["edit-link","advanced-emoji","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/arkadiuszizycki/devmeeting_react_redux/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/jsx.md","mtime":"2019-11-22T17:18:09.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-22T17:47:40.685Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -469,6 +473,10 @@ Unfortunately, some of those keywords are quite useful in HTML code, like <code>
     
         
         <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
