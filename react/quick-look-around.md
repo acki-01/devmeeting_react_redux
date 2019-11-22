@@ -14,9 +14,11 @@ Unit tests for the component.
 
 Finally, the component file itself. There's some code written already that we'll replace.
 
--   capital "A" - all component names (and filenames) should be written in upper camel case, without any pre- or suffixes. ( :warning: according to AirBnB style-guide )
+-   Capital "A" - all component names (and filenames containing components) should be written in pascal case without
+ any `pre-` or
+ suffixes. ( :warning: according to AirBnB style-guide )
 -   `export default App;` - default exports are a standard practice for React.
--   `return ( ...` - allows for better formatting
+-   `return ( ... )` - allows for better formatting
 
 ## src/index.jsx
 
@@ -29,10 +31,11 @@ Global styles
 
 ## src/logo.svg
 
-Not interesting in itself, but why here and not in `/public` directory? `/public` contains only truly static assets,
+Not interesting in itself, but why is it here and not in `/public` directory? `/public` contains only truly static
+ assets,
 while importing them into the component file allows for easier usage and webpack transformations.
 
-## src/serviceWorker.ts
+## src/serviceWorker.js
 
 Contains the code for a default service worker enabling PWA style app.
 Also, all files that don't contain components should be named using the lower camel-case style.

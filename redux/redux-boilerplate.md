@@ -2,7 +2,9 @@
 
 ## Reducer
 
-Reducer is a function which has access to store and action which was made. Depending on action type decide how to handle state and returns it new version. If provided action wasn't specify in reducer function it returns unchanged state. To create basic reducer create folder `store` in `./src` directory file `storeName.js` and in it
+Reducer is a function which has access to store and action which was made. Depending on action type it decides how to
+ handle state and returns it as a new version of it. If provided action wasn't specified in reducer function it returns
+  unchanged state. To create basic reducer create folder `store` in `./src` directory and a file `storeName.js` in it.
 
 ```js
 const initialState = {
@@ -64,7 +66,7 @@ export const addItem = item => ({
 
 ## Redux devtools
 
-Immutability of Redux gives us access to a powerfull tool in which we can inspect our store, changes and move in a timeline of actions that were dispatched.
+Immutability of Redux gives us access to a powerful tool in which we can inspect our store, changes and move in a timeline of actions that were dispatched.
 
 Install Redux devtools plugin for Chrome and in application in `./src/index.js`:
 

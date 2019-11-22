@@ -5,9 +5,10 @@
 
 # Agenda
 
-1. Hello, Devmeetings
+1. Hello, DevMeetings
 2. Speed dating :kissing_closed_eyes:
-    > ten rounds, each takes 2 minutes: pick a random person, say hello, for 1 minute talk about yourself and your experience, listen for the next 60 seconds
+    > Ten rounds, each takes 2 minutes: pick a random person, say hello, for 1 minute talk about yourself and your
+    > experience, listen for the next 60 seconds
 3. Intro to React
 4. Functional components
 5. Hooks: useState and useEffect
