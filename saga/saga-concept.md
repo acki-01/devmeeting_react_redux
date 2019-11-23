@@ -12,6 +12,7 @@ function* iAmGeneratorFunction() {
     yield 1;
     yield { name: 'Apple', amount: 5 };
 }
+
 const iAmGeneratorObject = iAmGeneratorFunction();
 console.log(iAmGeneratorObject.next());
 console.log(iAmGeneratorObject.next());
