@@ -12,7 +12,7 @@ const SomeComponent = props => {
             <ul>
                 {props.items.map(item => (
                     <div>
-						<span>{item}<span>
+						<span>{item}</span>
 						<button onClick={(() => props.onAddItem(item))}>
 							Add
 						</button>
